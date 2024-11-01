@@ -1,19 +1,23 @@
 # ARDUINO-PULSE-CHECKER
  This project creates a Pulse Tester using an Arduino Uno, heart rate sensor, and a 0.96" OLED display to measure and display a person’s heart rate in beats per minute (BPM). 
-Components Used
-Arduino Uno: The main microcontroller that processes sensor readings and controls the OLED display.
-Pulse Sensor: A small, wearable device that detects a pulse via blood flow changes, outputting a signal that can be processed to measure BPM.
-OLED Display (0.96" I2C): A compact screen used to visually display the BPM data. The I2C communication makes it easy to connect and program with only two data pins (SDA and SCL).
-Project Purpose
+#Components Used
+
+#Arduino Uno: The main microcontroller that processes sensor readings and controls the OLED display.
+#Pulse Sensor: A small, wearable device that detects a pulse via blood flow changes, outputting a signal that can be processed to measure BPM.
+#OLED Display (0.96" I2C): A compact screen used to visually display the BPM data. The I2C communication makes it easy to connect and program with only two data pins (SDA and SCL).
+#Project Purpose
+
 The purpose of the pulse tester is to measure and display real-time heart rate data. This can be useful for tracking health or fitness progress and offers an introduction to biomedical sensors and real-time data display in Arduino projects.
 
-How It Works
+#How It Works
+
 Initialization: When the system starts, the OLED display initializes and shows "Pulse Tester" to confirm that the screen and connections are working.
-Pulse Detection:
+#Pulse Detection:
 The Pulse Sensor, connected to an analog input on the Arduino, reads the analog voltage changes caused by blood flow variations with each heartbeat.
 The Arduino’s PulseSensorPlayground library interprets these variations and calculates the BPM by counting the pulses within a set period.
 A threshold is set to avoid noise in the readings, only registering a pulse when the signal exceeds this limit.
-Display BPM:
+#Display BPM:
+
 The system continuously monitors the sensor, and each time a beat is detected, it calculates the current BPM.
 The BPM value is printed on the serial monitor and displayed on the OLED screen in real time.
 The display is cleared and updated every time a new beat is detected, ensuring that only the current BPM is shown.
